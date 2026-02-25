@@ -1,0 +1,7 @@
+/** Clamp a value between min and max (inclusive). */
+export function clamp(value: number, min: number, max: number): number {
+  if (min > max) {
+    throw new Error(`clamp: min (${min}) must be <= max (${max})`);
+  }
+  return value < min ? min : value > max ? max : value;
+}
